@@ -14,7 +14,6 @@ library(reshape2)
 wearableChart <- function(DATE1,DATE2,CITY){
   
   url <- paste0("http://159.89.172.254:8090/feedback?from=",as.character(DATE1),"&to=",as.character(DATE2),"&city=",as.character(CITY))
-  # url <- paste0("http://159.89.172.254:8090/feedback?from=2018-05-06&to=2018-05-07&city=Bangalore")
   
   response<-GET(url)
   wr_raw <- content(response, "text")
